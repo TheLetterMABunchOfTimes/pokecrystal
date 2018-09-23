@@ -1779,9 +1779,6 @@ LinkTrade:
 	call GetPartyLocation
 	ld b, h
 	ld c, l
-	farcall GetCaughtGender
-	ld a, c
-	ld [wPlayerTrademonCaughtData], a
 	ld hl, wOTPlayerName
 	ld de, wOTTrademonSenderName
 	ld bc, NAME_LENGTH
@@ -1818,9 +1815,6 @@ LinkTrade:
 	call GetPartyLocation
 	ld b, h
 	ld c, l
-	farcall GetCaughtGender
-	ld a, c
-	ld [wOTTrademonCaughtData], a
 	ld a, [wd002]
 	ld [wCurPartyMon], a
 	ld hl, wPartySpecies

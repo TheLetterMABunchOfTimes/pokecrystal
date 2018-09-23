@@ -19,4 +19,3 @@ HappinessChanges:
 	db -10, -10, -15 ; Used Energy Root (bitter)
 	db -15, -15, -20 ; Used Revival Herb (bitter)
 	db  +3,  +3,  +1 ; Grooming
-	db +10,  +6,  +4 ; Gained a level in the place where it was caught

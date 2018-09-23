@@ -1598,19 +1598,6 @@ UNION ; d002
 wTempMail:: mailmsg wTempMail
 
 NEXTU ; d002
-; poke seer
-wSeerAction:: db
-wSeerNickname:: ds MON_NAME_LENGTH
-wSeerCaughtLocation:: ds 17
-wSeerTimeOfDay:: ds NAME_LENGTH
-wSeerOTName:: ds NAME_LENGTH
-wSeerOTNameGrammar:: db
-wSeerCaughtLevelString:: ds 4
-wSeerCaughtLevel:: db
-wSeerCaughtData:: db
-wSeerCaughtGender:: db
-
-NEXTU ; d002
 ; mon buffer
 wBufferMonNick:: ds MON_NAME_LENGTH ; d002
 wBufferMonOT:: ds NAME_LENGTH ; d00d

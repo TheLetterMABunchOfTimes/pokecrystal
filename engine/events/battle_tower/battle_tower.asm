@@ -107,9 +107,6 @@ Function170139:
 	ld bc, wPlayerID
 	ld de, wPlayerGender
 	farcall GetMobileOTTrainerClass
-	ld de, wBT_OTTempMon1CaughtGender
-	ld a, c
-	ld [de], a
 	inc de
 	ld a, LOW(wPartyMons)
 	ld [wcd49], a

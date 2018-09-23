@@ -24,9 +24,6 @@ Function170000:
 	ld a, [hl]
 	ld [wPlayerTrademonID + 1], a
 	ld bc, $c633
-	farcall GetCaughtGender
-	ld a, c
-	ld [wPlayerTrademonCaughtData], a
 	ld a, [wcd81]
 	ld [wc74e], a
 	ld hl, $c608
@@ -63,9 +60,6 @@ Function17005a:
 	ld a, [hl]
 	ld [wOTTrademonID + 1], a
 	ld bc, $a82c
-	farcall GetCaughtGender
-	ld a, c
-	ld [wOTTrademonCaughtData], a
 	ld a, [wcd81]
 	ld [wc74e], a
 	call CloseSRAM

@@ -69,19 +69,9 @@ CheckPartyFullAfterContest:
 	call GetPartyLocation
 	ld a, [hl]
 	ld [wCurPartyLevel], a
-	call SetCaughtData
-	ld a, [wPartyCount]
-	dec a
-	ld hl, wPartyMon1CaughtLocation
-	call GetPartyLocation
-	ld a, [hl]
-	and CAUGHT_GENDER_MASK
-	ld b, NATIONAL_PARK
-	or b
-	ld [hl], a
 	xor a
 	ld [wContestMon], a
-	and a ; BUGCONTEST_CAUGHT_MON
+	and a
 	ld [wScriptVar], a
 	ret
 
@@ -129,16 +119,6 @@ CheckPartyFullAfterContest:
 	call GetSRAMBank
 	ld a, [sBoxMon1Level]
 	ld [wCurPartyLevel], a
-	call CloseSRAM
-	call SetBoxMonCaughtData
-	ld a, BANK(sBoxMon1CaughtLocation)
-	call GetSRAMBank
-	ld hl, sBoxMon1CaughtLocation
-	ld a, [hl]
-	and CAUGHT_GENDER_MASK
-	ld b, NATIONAL_PARK
-	or b
-	ld [hl], a
 	call CloseSRAM
 	xor a
 	ld [wContestMon], a

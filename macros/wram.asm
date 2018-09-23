@@ -23,7 +23,6 @@ box_struct: MACRO
 \1CaughtData::
 \1CaughtTime::
 \1CaughtLevel::    db
-\1CaughtGender::
 \1CaughtLocation:: db
 \1Level::          db
 \1End::

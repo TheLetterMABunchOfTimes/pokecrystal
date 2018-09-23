@@ -286,9 +286,6 @@ Function17d0f3:
 	ld a, [hl]
 	ld [wOTTrademonDVs + 1], a
 	ld bc, wc608 + 5
-	farcall GetCaughtGender
-	ld a, c
-	ld [wOTTrademonCaughtData], a
 	call SpeechTextBox
 	call FadeToMenu
 	farcall Function10804d
@@ -2270,7 +2267,6 @@ Function17ded9:
 	push hl
 	push bc
 	predef TryAddMonToParty
-	farcall SetCaughtData
 	pop bc
 	pop hl
 	bit 1, b
@@ -2308,7 +2304,6 @@ Function17ded9:
 	ld a, [hli]
 	ld b, a
 	push hl
-	farcall SetGiftPartyMonCaughtData
 	pop hl
 	pop bc
 	jr .asm_17df5e
@@ -2463,7 +2458,6 @@ Function17e026:
 	push hl
 	farcall LoadEnemyMon
 	farcall SendMonIntoBox
-	farcall SetBoxMonCaughtData
 	pop hl
 	pop bc
 	ld a, BANK(sBoxMonNicknames)
@@ -2492,7 +2486,6 @@ Function17e026:
 	ld b, a
 	push hl
 	call CloseSRAM
-	farcall SetGiftBoxMonCaughtData
 	ld a, $1
 	call GetSRAMBank
 	pop hl

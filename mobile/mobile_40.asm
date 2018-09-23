@@ -6038,9 +6038,6 @@ Function102a3b:
 	call GetPartyLocation
 	ld b, h
 	ld c, l
-	farcall GetCaughtGender
-	ld a, c
-	ld [wPlayerTrademonCaughtData], a
 	ld hl, wOTPlayerName
 	ld de, wOTTrademonSenderName
 	ld bc, NAME_LENGTH
@@ -6083,9 +6080,6 @@ Function102a3b:
 	call GetPartyLocation
 	ld b, h
 	ld c, l
-	farcall GetCaughtGender
-	ld a, c
-	ld [wOTTrademonCaughtData], a
 	ret
 
 Function102b12:

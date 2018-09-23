@@ -7314,9 +7314,6 @@ Function11b7e5:
 	ld a, [hl]
 	ld [wOTTrademonDVs + 1], a
 	ld bc, $c60d ; pokemon_data_start
-	farcall GetCaughtGender
-	ld a, c
-	ld [wOTTrademonCaughtData], a
 	call SpeechTextBox
 	call FadeToMenu
 	farcall MobileTradeAnimation_ReceiveGetmonFromGTS

@@ -1728,7 +1728,6 @@ GivePoke::
 	ld [hli], a
 	ld [hl], LOW(01001)
 	pop bc
-	farcall SetGiftPartyMonCaughtData
 	jr .skip_nickname
 
 .send_to_box
@@ -1752,7 +1751,6 @@ GivePoke::
 	call Random
 	ld [hl], a
 	call CloseSRAM
-	farcall SetGiftBoxMonCaughtData
 	jr .skip_nickname
 
 .wildmon
@@ -1762,13 +1760,6 @@ GivePoke::
 	push de
 	ld a, b
 	and a
-	jr z, .party
-	farcall SetBoxMonCaughtData
-	jr .set_caught_data
-
-.party
-	farcall SetCaughtData
-.set_caught_data
 	farcall GiveANickname_YesNo
 	pop de
 	jr c, .skip_nickname

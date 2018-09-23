@@ -153,25 +153,6 @@ DoNPCTrade:
 	ld de, wPlayerTrademonDVs
 	call Trade_CopyTwoBytes
 
-	ld hl, wPartyMon1Species
-	ld bc, PARTYMON_STRUCT_LENGTH
-	call Trade_GetAttributeOfCurrentPartymon
-	ld b, h
-	ld c, l
-	farcall GetCaughtGender
-	ld a, c
-	ld [wPlayerTrademonCaughtData], a
-
-	ld e, NPCTRADE_DIALOG
-	call GetTradeAttribute
-	ld a, [hl]
-	cp TRADE_DIALOGSET_GIRL
-	ld a, CAUGHT_BY_GIRL
-	jr c, .okay
-	ld a, CAUGHT_BY_BOY
-.okay
-	ld [wOTTrademonCaughtData], a
-
 	ld hl, wPartyMon1Level
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call Trade_GetAttributeOfCurrentPartymon
@@ -193,7 +174,7 @@ DoNPCTrade:
 	jr c, .incomplete
 	ld b, SET_FLAG
 .incomplete
-	farcall SetGiftPartyMonCaughtData
+;	farcall SetGiftPartyMonCaughtData
 
 	ld e, NPCTRADE_NICK
 	call GetTradeAttribute

@@ -237,7 +237,6 @@ INCLUDE "engine/battle/sliding_intro.asm"
 INCLUDE "mobile/print_opp_message.asm"
 INCLUDE "engine/battle/check_battle_scene.asm"
 INCLUDE "engine/movie/gbc_only.asm"
-INCLUDE "engine/events/poke_seer.asm"
 
 
 SECTION "bank14", ROMX

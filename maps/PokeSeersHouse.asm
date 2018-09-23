@@ -7,12 +7,23 @@ PokeSeersHouse_MapScripts:
 	db 0 ; callbacks
 
 SeerScript:
-	faceplayer
-	opentext
-	special PokeSeer
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer ReplacedSeerText
+	
+ReplacedSeerText:
+	text "I used to tell you"
+	line "about your #MON"
+	cont "but this feature"
+	cont "was taken out due"
+	cont "to adding 2-byte"
+	cont "#MON IDs."
+
+	para "I'm sorry for the"
+	line "inconvenience."
+
+	para "ROMhackers should"
+	line "add something like"
+	cont "IV checking here."
+	done
 
 PokeSeersHouse_MapEvents:
 	db 0, 0 ; filler
