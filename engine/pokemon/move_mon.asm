@@ -93,6 +93,11 @@ GeneratePartyMonStats:
 	ld a, [wBaseDexNo]
 	ld [de], a
 	inc de
+	
+	xor a
+	; second species byte
+	ld [de], a
+	inc de
 
 	; Copy the item if it's a wild mon
 	ld a, [wBattleMode]
@@ -217,6 +222,7 @@ endr
 	push de
 	inc hl
 	inc hl
+	inc hl
 	call FillPP
 	pop de
 	pop hl
@@ -234,9 +240,6 @@ endr
 	ld [de], a
 	inc de
 	; CaughtData/CaughtTime/CaughtLevel
-	ld [de], a
-	inc de
-	; CaughtGender/CaughtLocation
 	ld [de], a
 	inc de
 
@@ -297,9 +300,6 @@ endr
 	ld [de], a
 	inc de
 	; CaughtData/CaughtTime/CaughtLevel
-	ld [de], a
-	inc de
-	; CaughtGender/CaughtLocation
 	ld [de], a
 	inc de
 

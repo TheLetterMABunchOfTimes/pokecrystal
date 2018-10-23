@@ -3861,7 +3861,6 @@ InitBattleMon:
 	call CopyBytes
 	inc hl
 	inc hl
-	inc hl
 	ld de, wBattleMonLevel
 	ld bc, PARTYMON_STRUCT_LENGTH - MON_LEVEL
 	call CopyBytes

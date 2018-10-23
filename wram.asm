@@ -413,8 +413,6 @@ wBattleMonNick:: ds MON_NAME_LENGTH ; c621
 
 wBattleMon:: battle_struct wBattleMon ; c62c
 
-	ds 2
-
 wWildMon:: db ; c64e
 	ds 1
 wEnemyTrainerItem1:: db ; c650
@@ -1926,7 +1924,7 @@ wCurItemQuantity:: ; d107
 wMartItemID::
 	db
 
-wCurPartySpecies:: db ; d108
+wCurPartySpecies:: dw ; d108
 
 wCurPartyMon:: ; d109
 ; contains which monster in a party
@@ -2791,7 +2789,7 @@ SECTION "Party", WRAMX
 wPokemonData::
 
 wPartyCount::   db ; dcd7 ; number of Pokémon in party
-wPartySpecies:: ds PARTY_LENGTH ; dcd8 ; species of each Pokémon in party
+wPartySpecies:: ds PARTY_LENGTH*2 ; dcd8 ; species of each Pokémon in party
 wPartyEnd::     db ; dcde ; older code doesn't check wPartyCount
 
 wPartyMons::

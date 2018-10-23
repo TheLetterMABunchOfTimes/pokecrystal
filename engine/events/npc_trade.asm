@@ -166,15 +166,6 @@ DoNPCTrade:
 	callfar RemoveMonFromPartyOrBox
 	predef TryAddMonToParty
 
-	ld e, NPCTRADE_DIALOG
-	call GetTradeAttribute
-	ld a, [hl]
-	cp TRADE_DIALOG_COMPLETE
-	ld b, RESET_FLAG
-	jr c, .incomplete
-	ld b, SET_FLAG
-.incomplete
-;	farcall SetGiftPartyMonCaughtData
 
 	ld e, NPCTRADE_NICK
 	call GetTradeAttribute

@@ -5,7 +5,7 @@ flag_array: MACRO
 ENDM
 
 box_struct: MACRO
-\1Species::        db
+\1Species::        dw
 \1Item::           db
 \1Moves::          ds NUM_MOVES
 \1ID::             dw
@@ -23,7 +23,6 @@ box_struct: MACRO
 \1CaughtData::
 \1CaughtTime::
 \1CaughtLevel::    db
-\1CaughtLocation:: db
 \1Level::          db
 \1End::
 ENDM
@@ -76,7 +75,7 @@ red_party_struct: MACRO
 ENDM
 
 battle_struct: MACRO
-\1Species::   db
+\1Species::   dw
 \1Item::      db
 \1Moves::     ds NUM_MOVES
 \1MovesEnd::
